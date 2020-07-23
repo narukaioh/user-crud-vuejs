@@ -1,6 +1,10 @@
 <template>
   <ul class="user-list">
-    <user-item></user-item>
+    <user-item
+      v-for="(user, index) in users"
+      :key="index"
+      :item="user"
+    />
   </ul>
 </template>
 
@@ -11,6 +15,21 @@ export default {
   name: 'User List',
   components: {
     UserItem
+  },
+  data () {
+    return {
+      users: [
+        {
+          id: 1,
+          name: 'Ju Dantas',
+          email: 'jucienyds@gmail.com'
+        }, {
+          id: 2,
+          name: 'Luana da Rosa',
+          email: 'luanadrosa@gmail.com'
+        }
+      ]
+    }
   }
 }
 </script>

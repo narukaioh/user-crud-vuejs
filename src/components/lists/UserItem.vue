@@ -1,8 +1,8 @@
 <template>
   <li>
-    <strong>ju dantas</strong>
-    <span>judantas@gmail.com</span>
-    <options></options>
+    <strong>{{ item.name }}</strong>
+    <span>{{ item.email }}</span>
+    <options :id="item.id"></options>
   </li>
 </template>
 
@@ -10,6 +10,9 @@
 import Options from '@/components/toolbar/Options'
 export default {
   name: 'User Item',
+  props: {
+    item: Object
+  },
   components: {
     Options
   }

@@ -3,10 +3,12 @@ import Router from 'vue-router'
 import LoginPage from '@/pages/Login'
 import UserPage from '@/pages/UserPage'
 import Register from '@/pages/RegisterPage'
+import beforeEach from './beforeEach'
 
 Vue.use(Router)
 
-export default new Router({
+const routes = new Router({
+  history: true,
   routes: [
     {
       path: '/',
@@ -15,7 +17,8 @@ export default new Router({
     }, {
       path: '/users',
       name: 'Users Page',
-      component: UserPage
+      component: UserPage,
+      meta: { auth: true }
     }, {
       path: '/signup',
       name: 'Register Page',
@@ -23,3 +26,7 @@ export default new Router({
     }
   ]
 })
+
+routes.beforeEach(beforeEach)
+
+export default routes

@@ -12,22 +12,17 @@
     <span>Confirm Password:</span>
     <input type="password" />
 
-    <div class="button-options">
-      <button-primary></button-primary>
-      <button-secondary></button-secondary>
-    </div>
+    <button-options />
   </form>
 </template>
 
 <script>
-import ButtonPrimary from '@/components/buttons/ButtonPrimary'
-import ButtonSecondary from '@/components/buttons/ButtonSecondary'
+import ButtonOptions from '@/components/toolbar/ButtonOptions'
 
 export default {
   name: 'Login',
   components: {
-    ButtonPrimary,
-    ButtonSecondary
+    ButtonOptions
   }
 }
 </script>

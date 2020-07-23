@@ -1,9 +1,13 @@
 <template>
-  <button class="secondary">Limpar</button>
+  <button class="secondary">{{ label }}</button>
 </template>
 
 <script>
 export default {
+  name: 'Button Secondary',
+  props: {
+    label: String
+  }
 }
 </script>
 

@@ -1,10 +1,13 @@
 <template>
-  <button class="primary">Enviar</button>
+  <button class="primary">{{ label }}</button>
 </template>
 
 <script>
 export default {
-
+  name: 'Button Primary',
+  props: {
+    label: String
+  }
 }
 </script>
 

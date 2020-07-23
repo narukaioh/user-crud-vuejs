@@ -41,12 +41,10 @@ button:active {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 * { box-sizing: border-box; }
+
 .login-form, .register-form {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -56,9 +54,10 @@ button:active {
   text-align: left;
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 850px) {
   .login-form, .register-form {
     width: 350px;
   }

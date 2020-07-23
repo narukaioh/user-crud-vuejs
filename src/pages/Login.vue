@@ -1,23 +1,27 @@
 <template>
-  <form class="login-form">
-    <span>Email:</span>
-    <input type="email" v-model="user.email" />
+  <div>
+    <form class="login-form">
+      <span>Email:</span>
+      <input type="email" v-model="user.email" />
 
-    <span>Password:</span>
-    <input type="password" v-model="user.password" />
+      <span>Password:</span>
+      <input type="password" v-model="user.password" />
 
-    <div class="button-options">
-      <button-primary
-        label="Enviar"
-        :callback="signin(user)" />
+      <div class="button-options">
+        <button-primary
+          label="Sign in"
+          :callback="signin(user)" />
 
-      <button-secondary
-        label="Limpar"
-        :callback="clear(user)" />
-    </div>
+        <button-secondary
+          label="Clean"
+          :callback="clear(user)" />
+      </div>
 
-    <router-link to="/signup">Signup</router-link>
-  </form>
+    </form>
+    <p>Create a new account! <router-link to="/signup">Signup</router-link></p>
+    <p>developed by judantas © 2020</p>
+
+  </div>
 </template>
 
 <script>

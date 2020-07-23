@@ -18,8 +18,8 @@
       </div>
 
     </form>
-    <p>Create a new account! <router-link to="/signup">Signup</router-link></p>
-    <p>developed by judantas © 2020</p>
+    <p>Create a new account! <router-link to="/signup">Sign up</router-link></p>
+    <p>developed by <a href="https://github.com/narukaioh" target="_blank">judantas</a> © 2020</p>
 
   </div>
 </template>
@@ -54,7 +54,7 @@ export default {
 
     clear (user) {
       return () => {
-        console.log(user.email)
+        this.user = { email: '', password: '' }
       }
     },
 

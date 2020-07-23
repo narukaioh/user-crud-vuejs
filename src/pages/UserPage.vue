@@ -1,19 +1,30 @@
 <template>
   <div class="user-page">
     <user-search></user-search>
-    <user-list></user-list>
+    <user-list :users="users"></user-list>
   </div>
 </template>
 
 <script>
 import UserList from '@/components/lists/UserList'
 import UserSearch from '@/components/search/UserSearch'
+import { getUsers } from '@/services/user'
 
 export default {
-  name: 'Users Page',
+  name: 'UsersPage',
   components: {
     UserList,
     UserSearch
+  },
+  data () {
+    return {
+      users: []
+    }
+  },
+  created () {
+    getUsers().then(res => {
+      this.users = res.users
+    })
   }
 }
 </script>

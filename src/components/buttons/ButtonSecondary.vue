@@ -1,12 +1,18 @@
 <template>
-  <button class="secondary">{{ label }}</button>
+  <button type="button" @click="execute()" class="secondary">{{ label }}</button>
 </template>
 
 <script>
 export default {
-  name: 'Button Secondary',
+  name: 'ButtonSecondary',
   props: {
-    label: String
+    label: String,
+    callback: Function
+  },
+  methods: {
+    execute () {
+      this.callback()
+    }
   }
 }
 </script>

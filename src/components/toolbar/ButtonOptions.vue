@@ -10,7 +10,7 @@ import ButtonPrimary from '@/components/buttons/ButtonPrimary'
 import ButtonSecondary from '@/components/buttons/ButtonSecondary'
 
 export default {
-  name: 'Button Options',
+  name: 'ButtonOptions',
   components: {
     ButtonPrimary,
     ButtonSecondary

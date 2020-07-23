@@ -9,7 +9,7 @@
 <script>
 import Options from '@/components/toolbar/Options'
 export default {
-  name: 'User Item',
+  name: 'UserItem',
   props: {
     item: Object
   },

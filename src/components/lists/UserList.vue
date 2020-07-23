@@ -12,24 +12,12 @@
 import UserItem from './UserItem'
 
 export default {
-  name: 'User List',
+  name: 'UserList',
+  props: {
+    users: Array
+  },
   components: {
     UserItem
-  },
-  data () {
-    return {
-      users: [
-        {
-          id: 1,
-          name: 'Ju Dantas',
-          email: 'jucienyds@gmail.com'
-        }, {
-          id: 2,
-          name: 'Luana da Rosa',
-          email: 'luanadrosa@gmail.com'
-        }
-      ]
-    }
   }
 }
 </script>
